@@ -11,9 +11,27 @@
   	<servlet-class>com.example.servlet.MyController</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>ServletView</servlet-name>
+  	<jsp-file>/view.jsp</jsp-file>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>ServletController</servlet-name>
   	<url-pattern>/control.do</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletView</servlet-name>
+  	<url-pattern>/go.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <jsp-config>
+  	<jsp-property-group>
+  	<url-pattern>*.jsp</url-pattern>
+  		<el-ignored>false</el-ignored>
+  		<scripting-invalid>false</scripting-invalid>
+  	</jsp-property-group>
+  </jsp-config>
   
 </web-app>
